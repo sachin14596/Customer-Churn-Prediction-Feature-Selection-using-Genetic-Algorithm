@@ -1,0 +1,23 @@
+STEP 1:
+result_sp <- runGA(noRuns = 30)
+getBestFitness()
+getBestSolution()
+
+STEP 2:
+result_u <- runGA(noRuns = 30)
+getBestFitness()
+getBestSolution()
+
+STEP 3:
+result_tp <- runGA(noRuns = 30)
+getBestFitness()
+getBestSolution()
+
+STEP 4:
+p1 <- parseData(result_sp, 2, 5)
+p2 <- parseData(result_u, 2, 5)
+p3 <- parseData(result_tp, 2, 5)
+
+STEP 5:
+plotbars(p1, p2, p3, "Single-Point Crossover", "Uniform Crossover", "Two-Point Crossover")
+
